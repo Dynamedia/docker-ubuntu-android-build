@@ -36,6 +36,7 @@ RUN \
                      xsltproc \
                      unzip \
                      git \
+                     git-lfs \
                      gcc \
                      curl \
                      make \

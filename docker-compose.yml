@@ -4,8 +4,6 @@ services:
   ubuntu:
     build: .
     image: dynamedia/docker-ubuntu-android-build
-    env_file:
-      - .env
     volumes:
       - ./data/home/build:/home/build/
     restart: always

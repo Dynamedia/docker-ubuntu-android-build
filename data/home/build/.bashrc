@@ -39,3 +39,12 @@ source $HOME/.scripts/git-completion.sh
 
 # Z
 source $HOME/.scripts/z.sh
+
+# AOSP
+
+export USE_CCACHE=1
+
+alias setccache='./prebuilts/misc/linux-x86/ccache/ccache -M 15G'
+
+# Half of available memory for Jack
+export ANDROID_JACK_VM_ARGS="-Xmx$(awk '/MemTotal/ { printf "%.0f", $2/1024/2 }' /proc/meminfo)m -Dfile.encoding=UTF-8 -XX:+TieredCompilation"

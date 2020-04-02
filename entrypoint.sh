@@ -2,8 +2,8 @@
 
 USER_NAME=${USER_NAME:-build}
 USER_GROUP=${USER_GROUP:-build}
-USER_UID=${USER_UID:-1000}
-USER_GID=${USER_GID:-1000}
+USER_UID=${USER_UID:-1001}
+USER_GID=${USER_GID:-1001}
 
 # Delete the already existing user / group if existing
 
