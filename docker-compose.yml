@@ -3,7 +3,7 @@ version: "3.4"
 services:
   ubuntu:
     build: .
-    image: dynamedia/docker-ubuntu-android-build
+    image: dynamedia/docker-ubuntu-android-build:v1
     volumes:
       - ./data/home/build:/home/build/
     restart: always

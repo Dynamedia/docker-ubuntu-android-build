@@ -51,7 +51,7 @@ RUN \
     libxml2-utils \
     openjdk-8-jdk \
     pngcrush \
-    pulsseaudio-esound-compat \
+    pulseaudio-esound-compat \
     python-enum34 \
     python-mako \
     repo \
