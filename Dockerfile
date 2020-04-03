@@ -14,42 +14,57 @@ RUN \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip vim wget nano acl
+  apt-get install -y byobu curl git htop man unzip vim wget nano acl screen
 RUN \
-  apt-get install -y git-core \
-                     gnupg flex \
-                     bison \
-                     gperf \
-                     build-essential \
-                     zip \
-                     curl \
-                     zlib1g-dev \
-                     gcc-multilib \
-                     g++-multilib \
-                     libc6-dev-i386 \
-                     lib32ncurses5-dev \
-                     x11proto-core-dev \
-                     libx11-dev \
-                     lib32z-dev \
-                     libgl1-mesa-dev \
-                     libxml2-utils \
-                     xsltproc \
-                     unzip \
-                     git \
-                     git-lfs \
-                     gcc \
-                     curl \
-                     make \
-                     repo \
-                     flex \
-                     m4 \
-                     openjdk-8-jdk \
-                     lib32stdc++6 \
-                     libelf-dev \
-                     libssl-dev \ 
-                     python-enum34 \
-                     python-mako \
-                     syslinux-utils && \
+  apt-get install -y \
+    android-tools-adb \
+    bc \
+    bison \
+    build-essential \
+    flex \
+    gcc \
+    gcc-multilib \
+    g++-multilib \
+    git-lfs \
+    gnupg \
+    gperf \
+    imagemagick \
+    lzop \
+    m4 \
+    make \
+    lib32ncurses5-dev \
+    lib32readline-dev \
+    lib32stdc++6 \
+    lib32z-dev \
+    lib32z1-dev \ 
+    libc6-dev-i386 \
+    libelf-dev \
+    libesd-java \
+    liblz4-tool \
+    libncurses5-dev \
+    libsdl1.2-dev \
+    libssl-dev \ 
+    libwxgtk3.0-dev \
+    libx11-dev \
+    libgl1-mesa-dev \
+    libxml2 \
+    libxml2-utils \
+    openjdk-8-jdk \
+    pngcrush \
+    pulsseaudio-esound-compat \
+    python-enum34 \
+    python-mako \
+    repo \
+    rsync \
+    schedtool \
+    squashfs-tools \
+    syslinux-utils \
+    unzip \
+    x11proto-core-dev \
+    xsltproc \
+    yasm \
+    zip \
+    zlib1g-dev && \
   rm -rf /var/lib/apt/lists/*
 
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
