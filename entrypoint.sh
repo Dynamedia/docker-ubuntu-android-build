@@ -29,13 +29,12 @@ else
 fi
 
 # Create our user & group with the specified details
-mkdir -p /home/$USER_NAME
-chown -R $USER_UID:$USER_GID /home/$USER_NAME
 useradd -u $USER_UID -s /bin/bash -d /home/$USER_NAME -g $USER_GROUP $USER_NAME > /dev/null 2>&1
 
+mkdir -p /home/$USER_NAME
 chown -R $USER_UID:$USER_GID /home/$USER_NAME
+
 chmod -R ug+s /home/$USER_NAME
 setfacl -R -d -m u:1000:rwx /home/$USER_NAME
-setfacl -R -d -m u:1001:rwx /home/$USER_NAME
 
 exec "$@"

@@ -21,14 +21,17 @@ RUN \
     bc \
     bison \
     build-essential \
+    ccache \
     flex \
     gcc \
     gcc-multilib \
     g++-multilib \
+    gettext \
     git-lfs \
     gnupg \
     gperf \
     imagemagick \
+    kmod \
     lzop \
     m4 \
     make \

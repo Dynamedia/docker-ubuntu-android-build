@@ -33,10 +33,12 @@ source $HOME/.scripts/z.sh
 
 # AOSP
 
+export X86_SOURCE_DIR=$HOME/androidx86
+mkdir -p $X86_SOURCE_DIR/ccache
+export CCACHE_DIR=$X86_SOURCE_DIR/ccache
 export USE_CCACHE=1
+export CCACHE_EXEC=/usr/bin/ccache
 export LC_ALL=C
-
+alias initrepox86='repo init -u git://git.osdn.net/gitroot/android-x86/manifest -b $1' 
+alias syncrepox86='repo sync --no-tags --no-clone-bundle'
 alias setccache='./prebuilts/misc/linux-x86/ccache/ccache -M 15G'
-
-# Half of available memory for Jack
-export ANDROID_JACK_VM_ARGS="-Xmx$(awk '/MemTotal/ { printf "%.0f", $2/1024/2 }' /proc/meminfo)m -Dfile.encoding=UTF-8 -XX:+TieredCompilation"
