@@ -22,10 +22,12 @@ RUN \
     bison \
     build-essential \
     ccache \
+    dosfstools \
     flex \
     gcc \
     gcc-multilib \
     g++-multilib \
+    genisoimage \
     gettext \
     git-lfs \
     gnupg \
@@ -35,6 +37,7 @@ RUN \
     lzop \
     m4 \
     make \
+    mtools \
     lib32ncurses5-dev \
     lib32readline-dev \
     lib32stdc++6 \

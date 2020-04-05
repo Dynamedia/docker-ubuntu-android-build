@@ -33,9 +33,10 @@ source $HOME/.scripts/z.sh
 
 # AOSP
 
-export X86_SOURCE_DIR=$HOME/androidx86
-mkdir -p $X86_SOURCE_DIR/ccache
-export CCACHE_DIR=$X86_SOURCE_DIR/ccache
+export WORKING_DIR=$HOME/work
+mkdir -p $WORKING_DIR/ccache
+
+export CCACHE_DIR=$WORKING_DIR/ccache
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
 export LC_ALL=C
